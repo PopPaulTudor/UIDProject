@@ -47,6 +47,10 @@
         <activity android:name=".chat.ChatActivity"
             android:exported="false">
         </activity>
+        <activity android:name=".keep_buddy.KeepBuddyActivity"
+            android:exported="false">
+
+        </activity>
     </application>
 
 </manifest>

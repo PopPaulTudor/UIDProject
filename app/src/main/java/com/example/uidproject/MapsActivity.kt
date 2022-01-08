@@ -13,6 +13,7 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.uidproject.databinding.ActivityMapsBinding
 import com.example.uidproject.friend_list.FriendListActivity
+import com.example.uidproject.keep_buddy.KeepBuddyActivity
 
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
@@ -29,7 +30,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val mapFragment = supportFragmentManager
             .findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(this)
-        val intent = Intent(this,ChatActivity::class.java)
+        val intent = Intent(this,KeepBuddyActivity::class.java)
         startActivity(intent);
     }
 

@@ -8,6 +8,12 @@
     android:gravity="center">
 
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        app:srcCompat="@drawable/ic_baseline_person_24" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="285dp"

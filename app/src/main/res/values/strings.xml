@@ -1,6 +1,24 @@
 <resources>
     <string name="app_name">UIDProject</string>
     <string name="title_activity_maps">MapsActivity</string>
+
+    <string name="users">USERS</string>
+    <string name="create_route">Create Route</string>
+    <string name="join_route">Join Route</string>
+    <string name="wallet">Wallet</string>
+    <string name="friendlist">Friendlist</string>
+    <string name="back">back</string>
+    <string name="password_text">password_text</string>
+    <string name="login_text">login_text</string>
+    <string name="username_text">username_text</string>
+    <string name="login">login</string>
+    <string name="add_car">add car</string>
+    <string name="car_name">Car name</string>
+    <string name="year">year</string>
+    <string name="number">number</string>
+    <string name="color">color</string>
+    <string name="add">add</string>
+
     <string name="title_activity_route_started">RouteStarted</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -10,4 +28,5 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
 </resources>

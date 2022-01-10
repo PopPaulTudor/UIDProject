@@ -4,10 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import java.util.ArrayList
 
-class Reviews : AppCompatActivity() {
+class Reviews : BaseActivity() {
     lateinit var listView: ListView
     var adapter: ReviewListAdapter? = null
 
@@ -16,6 +17,14 @@ class Reviews : AppCompatActivity() {
         setContentView(R.layout.activity_reviews)
 
         displayList()
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_reviews
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_home
     }
 
     fun displayList() {

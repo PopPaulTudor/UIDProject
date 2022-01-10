@@ -91,7 +91,7 @@
             android:name=".join_route.RouteSummary"
             android:exported="false" />
         <activity
-            android:name=".join_route.Profile"
+            android:name=".join_route.OthersProfile"
             android:exported="false" />
         <activity
             android:name=".join_route.TheirBuddies"

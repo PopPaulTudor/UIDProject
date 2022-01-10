@@ -4,10 +4,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import java.util.ArrayList
 
-class TheirBuddies : AppCompatActivity() {
+class TheirBuddies : BaseActivity() {
     lateinit var listView: ListView
     var adapter: BuddyListAdapter? = null
 
@@ -16,6 +17,14 @@ class TheirBuddies : AppCompatActivity() {
         setContentView(R.layout.activity_their_buddies)
 
         displayList()
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_their_buddies
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_home
     }
 
     private fun displayList() {
@@ -34,7 +43,7 @@ class TheirBuddies : AppCompatActivity() {
         listView.setOnItemClickListener { _, _, position, _ ->
             val selectedItem = buddyList[position]
 
-            val intent = Intent(this, Profile::class.java)
+            val intent = Intent(this, OthersProfile::class.java)
             startActivity(intent)
         }
     }

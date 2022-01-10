@@ -4,21 +4,24 @@ import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 
-class RouteSummary : AppCompatActivity()  {
+class RouteSummary : BaseActivity()  {
     var alertDialog: AlertDialog? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_route_summary)
+    override fun getLayoutId(): Int {
+        return R.layout.activity_route_summary
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_home
     }
 
     fun goToProfile(view: android.view.View) {
-        val intent = Intent(this, Profile::class.java)
+        val intent = Intent(this, OthersProfile::class.java)
         startActivity(intent)
     }
 

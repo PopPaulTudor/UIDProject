@@ -62,7 +62,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".ProfileActivity"
             android:exported="true"
@@ -122,6 +121,18 @@
         <activity
             android:name=".join_route.JoinedRoute"
             android:exported="false" />
+
+        <activity android:name=".friend_list.FriendListActivity"
+            android:exported="false">
+        </activity>
+
+        <activity android:name=".chat.ChatActivity"
+            android:exported="false">
+        </activity>
+        <activity android:name=".keep_buddy.KeepBuddyActivity"
+            android:exported="false">
+
+        </activity>
     </application>
 
 </manifest>

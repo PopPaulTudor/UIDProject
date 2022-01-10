@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".join_route.JoinedRoute">
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:onClick="goToProfile"
+        android:layout_marginTop="25dp"
+        android:text="Route has started" />
+
+    <ImageView
+        android:id="@+id/started_route_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+        android:layout_marginTop="80dp"
+        android:src="@drawable/map" />
+
+</LinearLayout>

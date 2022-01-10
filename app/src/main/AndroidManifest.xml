@@ -30,15 +30,62 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name=".HomeActivity"
             android:exported="true"
-            android:label="@string/title_activity_maps">
+            android:label="Home Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="true"
+            android:label="Profile">
+        </activity>
+
+        <activity
+            android:name=".SettingsActivity"
+            android:exported="true"
+            android:label="Settings">
+        </activity>
+
+        <activity
+            android:name=".create_route.CreateRouteActivity"
+            android:exported="true"
+            android:label="Create Route">
+        </activity>
+
+        <activity
+            android:name=".create_route.PickTransportationActivity"
+            android:exported="true"
+            android:label="Pick Transportation">
+        </activity>
+
+        <activity
+            android:name=".create_route.CreateRouteCarActivity"
+            android:exported="true"
+            android:label="Create Car">
+        </activity>
+
+        <activity
+            android:name=".create_route.CreateRouteBusActivity"
+            android:exported="true"
+            android:label="Create bus transit">
+        </activity>
+
+        <activity
+            android:name=".create_route.RouteSharedActivity"
+            android:exported="true"
+            android:label="Route Created">
+        </activity>
+
+
+
+
+
     </application>
 
 </manifest>

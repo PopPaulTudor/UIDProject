@@ -62,7 +62,7 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
         item.setChecked(true);
     }
 
-    abstract int getLayoutId();
+    public abstract int getLayoutId();
 
-    abstract int getBottomNavigationMenuItemId();
+    public abstract int getBottomNavigationMenuItemId();
 }

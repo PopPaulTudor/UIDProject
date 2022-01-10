@@ -2,12 +2,12 @@ package com.example.uidproject;
 
 public class SettingsActivity  extends BaseActivity{
     @Override
-    int getLayoutId() {
+    public int getLayoutId() {
         return R.layout.activity_settings;
     }
 
     @Override
-    int getBottomNavigationMenuItemId() {
+    public int getBottomNavigationMenuItemId() {
         return R.id.action_settings;
 
     }

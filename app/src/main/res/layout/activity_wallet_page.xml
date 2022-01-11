@@ -48,11 +48,11 @@
         app:layout_constraintVertical_bias="0.537"
         tools:text="balance" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/back"
         android:layout_width="143dp"
         android:layout_height="58dp"
-        android:background="#D3C88A"
+        app:cornerRadius="10dp"
         android:text="@string/back"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -61,5 +61,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.732"
         tools:ignore="MissingConstraints" />
+
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,6 +8,7 @@ import android.widget.Toast;
 
 import com.example.uidproject.BaseActivity;
 import com.example.uidproject.R;
+import com.example.uidproject.keep_buddy.KeepBuddyActivity;
 import com.google.android.material.snackbar.Snackbar;
 
 public class RouteSharedActivity extends BaseActivity {
@@ -50,9 +51,9 @@ public class RouteSharedActivity extends BaseActivity {
         });
 
         findViewById(R.id.endRoute).setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), CreateRouteActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            Intent intent = new Intent(getApplicationContext(), KeepBuddyActivity.class);
             startActivity(intent);
+            this.finish();
         });
 
 

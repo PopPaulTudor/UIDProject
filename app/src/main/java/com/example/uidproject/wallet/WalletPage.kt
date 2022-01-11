@@ -7,10 +7,11 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import com.example.uidproject.profilePage.ProfilePage
 
-class WalletPage : AppCompatActivity() {
+class WalletPage : BaseActivity() {
 
     lateinit var wallet: ImageView
     lateinit var button: Button
@@ -18,7 +19,6 @@ class WalletPage : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_wallet_page)
 
         val myWallet = findViewById<TextView>(R.id.my_wallet)
         myWallet.text = "My online wallet"
@@ -36,5 +36,13 @@ class WalletPage : AppCompatActivity() {
             this.finish()
             startActivity(intent)
         }
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_wallet_page
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_profile
     }
 }

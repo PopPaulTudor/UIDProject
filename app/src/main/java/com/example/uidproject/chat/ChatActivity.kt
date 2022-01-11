@@ -16,15 +16,15 @@ class ChatActivity : AppCompatActivity() {
         displayList()
     }
 
-    fun displayList() {
+    private fun displayList() {
         listView = findViewById(R.id.chat_list)
 
         val chats = mutableListOf<Chat>()
-        chats.add(Chat("Vlad" ,"Salut", true));
-        chats.add(Chat("Tudor", "Hey", false ));
-        chats.add(Chat("Vlad" ,"Ce mai faci?", true));
-        chats.add(Chat("Tudor" ,"Bine", false));
-        chats.add(Chat("Vlad" ,"Vrei sa iesim la o plimbare", true));
+        chats.add(Chat("Vlad" ,"Salut", true))
+        chats.add(Chat("Tudor", "Hey", false ))
+        chats.add(Chat("Vlad" ,"Ce mai faci?", true))
+        chats.add(Chat("Tudor" ,"Bine", false))
+        chats.add(Chat("Vlad" ,"Vrei sa iesim la o plimbare", true))
         chats.add(Chat("Tudor" ,"Sigur ca da", false));
         adapter = ChatListAdapter(this, chats as ArrayList<Chat>)
         listView.adapter = adapter

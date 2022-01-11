@@ -6,6 +6,7 @@ import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
+import com.example.uidproject.keep_buddy.KeepBuddyActivity
 
 class JoinedRoute : BaseActivity() {
 
@@ -27,5 +28,9 @@ class JoinedRoute : BaseActivity() {
     override fun getBottomNavigationMenuItemId(): Int {
         return R.id.action_home
     }
-
+    fun exitToMain(view: android.view.View) {
+        var intent = Intent(applicationContext, KeepBuddyActivity::class.java)
+        startActivity(intent)
+        this.finish()
+    }
 }

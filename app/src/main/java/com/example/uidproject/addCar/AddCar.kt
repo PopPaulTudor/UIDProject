@@ -6,17 +6,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import com.example.uidproject.profilePage.ProfilePage
 import com.google.android.material.textfield.TextInputEditText
 
-class AddCar : AppCompatActivity() {
+class AddCar : BaseActivity() {
     lateinit var button: Button
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_add_car)
 
         val hello = findViewById<TextView>(R.id.hello)
         hello.text = "Add your car"
@@ -38,5 +38,14 @@ class AddCar : AppCompatActivity() {
             startActivity(intent)
         }
 
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_add_car
+
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_profile
     }
 }

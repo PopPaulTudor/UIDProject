@@ -67,4 +67,12 @@
         android:backgroundTint="#8923A5"
         android:text="Send tip" />
 
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="285dp"
+        android:layout_height="66dp"
+        android:backgroundTint="#8923A5"
+        android:onClick="exitToMain"
+        android:text="Exit" />
+
 </LinearLayout>

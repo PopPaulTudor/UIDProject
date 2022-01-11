@@ -7,11 +7,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import com.example.uidproject.addCar.AddCar
+import com.example.uidproject.friend_list.FriendListActivity
 import com.example.uidproject.wallet.WalletPage
 
-class ProfilePage : AppCompatActivity() {
+class ProfilePage : BaseActivity() {
 
     lateinit var profilePicture: ImageView
     lateinit var ratingStars: ImageView
@@ -19,10 +21,8 @@ class ProfilePage : AppCompatActivity() {
     lateinit var wallet: Button
     lateinit var addCar: Button
 
-    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_profile_page)
 
         profilePicture = findViewById(R.id.profile_image)
         profilePicture.setImageResource(R.drawable.profile_image)
@@ -63,19 +63,26 @@ class ProfilePage : AppCompatActivity() {
                 "Like girl shut your pipe once in a while. Ok?"
 
         friendlist.setOnClickListener{
-
+            val intent = Intent(this, FriendListActivity::class.java)
+            startActivity(intent)
         }
 
         wallet.setOnClickListener {
             val intent = Intent(this, WalletPage::class.java)
-            this.finish()
             startActivity(intent)
         }
 
         addCar.setOnClickListener {
             val intent = Intent(this, AddCar::class.java)
-            this.finish()
             startActivity(intent)
         }
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_profile_page
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_profile
     }
 }

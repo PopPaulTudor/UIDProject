@@ -8,6 +8,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.uidproject.profilePage.ProfilePage;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 
@@ -43,9 +44,10 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             if (itemId == R.id.action_home) {
                 startActivity(new Intent(this, HomeActivity.class));
             } else if (itemId == R.id.action_profile) {
-                startActivity(new Intent(this, ProfileActivity.class));
+                startActivity(new Intent(this, ProfilePage.class));
             } else if (itemId == R.id.action_settings) {
-                startActivity(new Intent(this, SettingsActivity.class));
+                Toast.makeText(getApplicationContext(), "Yet to be implemented",
+                        Toast.LENGTH_SHORT).show();
             }
             finish();
         }, 300);

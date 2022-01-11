@@ -34,9 +34,6 @@ class ChatListAdapter(private val context: Context
 
         sender.text = arrayList[position].sender
         message.text = arrayList[position].message
-        if(!arrayList[position].isUser) {
-            sender.gravity = Gravity.END
-        }
         return convertView
     }
 }

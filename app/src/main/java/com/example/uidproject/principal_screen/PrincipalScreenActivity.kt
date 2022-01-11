@@ -7,6 +7,7 @@ import android.widget.ImageView
 import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 import com.example.uidproject.create_route.CreateRouteActivity
+import com.example.uidproject.join_route.screens.ChooseRoute
 
 class PrincipalScreenActivity : BaseActivity() {
 
@@ -30,10 +31,9 @@ class PrincipalScreenActivity : BaseActivity() {
         }
 
         button2.setOnClickListener {
-
-            //val intent = Intent(this, joinRoute::class.java)
-           // this.finish()
-           // startActivity(intent)
+            val intent = Intent(this, ChooseRoute::class.java)
+            this.finish()
+            startActivity(intent)
         }
     }
 

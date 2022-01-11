@@ -7,7 +7,6 @@
          Google Maps Android API v2, but you must specify either coarse or fine
          location permissions for the "MyLocation" functionality.
     -->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -22,20 +21,23 @@
             android:exported="false" />
         <activity
             android:name=".login.LoginPage"
-            android:exported="false" />
+            android:exported="true"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".wallet.WalletPage"
             android:exported="false" />
         <activity
             android:name=".profilePage.ProfilePage"
             android:exported="false" />
-        <activity
-            android:name=".mainActivity.MainActivity"
-            android:exported="false" />
 
-        android:theme="@style/Theme.UIDProject" >
         <activity
-            android:name=".RouteStarted"
+            android:name=".create_route.RouteSharedActivity"
             android:exported="false"
             android:label="@string/title_activity_route_started"
             android:theme="@style/Theme.UIDProject.NoActionBar" />
@@ -56,16 +58,23 @@
             android:name=".HomeActivity"
             android:exported="true"
             android:label="Home Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        </activity>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity
+            android:name=".principal_screen.PrincipalScreenActivity"
+            android:exported="true"
+            android:label="Home Activity">
         </activity>
         <activity
             android:name=".ProfileActivity"
             android:exported="true"
             android:label="Profile">
+        </activity>
+
+        <activity
+            android:name=".join_route.screens.ChooseRoute"
+            android:exported="true"
+            android:label="Choose Route">
         </activity>
 
         <activity
@@ -99,27 +108,19 @@
         </activity>
 
         <activity
-            android:name=".create_route.RouteSharedActivity"
-            android:exported="true"
-            android:label="Route Created">
-        </activity>
-        <activity
-            android:name=".join_route.ChooseRoute"
+            android:name=".join_route.screens.RouteSummary"
             android:exported="false" />
         <activity
-            android:name=".join_route.RouteSummary"
+            android:name=".join_route.screens.OthersProfile"
             android:exported="false" />
         <activity
-            android:name=".join_route.OthersProfile"
+            android:name=".join_route.screens.TheirBuddies"
             android:exported="false" />
         <activity
-            android:name=".join_route.TheirBuddies"
+            android:name=".join_route.screens.Reviews"
             android:exported="false" />
         <activity
-            android:name=".join_route.Reviews"
-            android:exported="false" />
-        <activity
-            android:name=".join_route.JoinedRoute"
+            android:name=".join_route.screens.JoinedRoute"
             android:exported="false" />
 
         <activity android:name=".friend_list.FriendListActivity"

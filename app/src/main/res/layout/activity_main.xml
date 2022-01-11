@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    tools:context=".mainActivity.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".principal_screen.PrincipalScreenActivity">
 
     <ImageView
         android:id="@+id/logo"
@@ -11,42 +12,59 @@
         android:layout_height="142dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="91dp"
-        android:layout_marginBottom="487dp"
-        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.24"
+        tools:ignore="ContentDescription"
         tools:layout_constraintEnd_toEndOf="parent"
         tools:layout_constraintStart_toStartOf="parent"
-        tools:srcCompat="@drawable/logo"
-        tools:ignore="ContentDescription" />
+        tools:srcCompat="@drawable/logo" />
 
-    <Button
+
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button1"
-        android:layout_width="139dp"
-        android:layout_height="72dp"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="361dp"
-        android:background="#D3C88A"
+        android:layout_marginBottom="256dp"
         android:text="@string/create_route"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_constraintBottom_toStartOf="@id/logo"
         tools:layout_constraintEnd_toEndOf="parent"
         tools:layout_constraintStart_toStartOf="parent" />
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/button2"
-        android:layout_width="139dp"
-        android:layout_height="72dp"
+        android:layout_width="200dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="264dp"
-        android:background="#D3C88A"
+        android:layout_marginBottom="164dp"
         android:text="@string/join_route"
-        android:textColor="@color/black"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/navigation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_constraintBottom_toStartOf="@id/button1"
         tools:layout_constraintEnd_toEndOf="parent"
         tools:layout_constraintStart_toStartOf="parent" />
 
-</RelativeLayout>
+    <include
+        android:id="@+id/navigation"
+        layout="@layout/item_bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

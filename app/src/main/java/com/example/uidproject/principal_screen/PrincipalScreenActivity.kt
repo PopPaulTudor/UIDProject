@@ -1,13 +1,14 @@
-package com.example.uidproject.mainActivity
+package com.example.uidproject.principal_screen
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
-import java.lang.Integer.parseInt
+import com.example.uidproject.create_route.CreateRouteActivity
 
-class MainActivity : AppCompatActivity() {
+class PrincipalScreenActivity : BaseActivity() {
 
     lateinit var logo: ImageView
     lateinit var button1: Button
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
         logo = findViewById(R.id.logo)
         logo.setImageResource(R.drawable.logo)
@@ -25,9 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         button1.setOnClickListener {
 
-            //val intent = Intent(this, createRoute::class.java)
-            //this.finish()
-            //startActivity(intent)
+            val intent = Intent(this, CreateRouteActivity::class.java)
+            startActivity(intent)
         }
 
         button2.setOnClickListener {
@@ -36,5 +35,13 @@ class MainActivity : AppCompatActivity() {
            // this.finish()
            // startActivity(intent)
         }
+    }
+
+    override fun getLayoutId(): Int {
+        return R.layout.activity_main
+    }
+
+    override fun getBottomNavigationMenuItemId(): Int {
+        return R.id.action_home
     }
 }

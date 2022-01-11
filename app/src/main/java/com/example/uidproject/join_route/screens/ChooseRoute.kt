@@ -1,23 +1,17 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.screens
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
 import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
-import java.util.ArrayList
+import com.example.uidproject.join_route.adapters.RouteListAdapter
+import com.example.uidproject.join_route.models.Route
 
-class ChooseRoute : BaseActivity() {
+class ChooseRoute: BaseActivity() {
+
     lateinit var listView: ListView
     var adapter: RouteListAdapter? = null
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_route)
-
-        displayList()
-    }
 
     override fun getLayoutId(): Int {
         return R.layout.activity_choose_route
@@ -25,6 +19,11 @@ class ChooseRoute : BaseActivity() {
 
     override fun getBottomNavigationMenuItemId(): Int {
         return R.id.action_home
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        displayList()
     }
 
     fun displayList(){
@@ -41,7 +40,6 @@ class ChooseRoute : BaseActivity() {
 
         listView.setOnItemClickListener { _, _, position, _ ->
             val selectedItem = routes[position]
-
             val intent = Intent(this, RouteSummary::class.java)
             startActivity(intent)
         }

@@ -1,11 +1,9 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.screens
 
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
-import android.os.Bundle
 import android.widget.EditText
-import androidx.appcompat.app.AppCompatActivity
 import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
 

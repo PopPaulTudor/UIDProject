@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center_horizontal"
-    tools:context=".join_route.RouteSummary">
+    tools:context=".join_route.screens.RouteSummary">
 
     <Button
         android:layout_width="200dp"

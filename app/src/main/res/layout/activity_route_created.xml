@@ -168,11 +168,12 @@
     </androidx.cardview.widget.CardView>
 
 
-    <Button
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/shareRoute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Share Route"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -181,11 +182,11 @@
         app:layout_constraintVertical_bias="0.25" />
 
 
-    <Button
-        android:id="@+id/endRoute"
+    <com.google.android.material.button.MaterialButton        android:id="@+id/endRoute"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="End Route"
+        app:cornerRadius="15dp"
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

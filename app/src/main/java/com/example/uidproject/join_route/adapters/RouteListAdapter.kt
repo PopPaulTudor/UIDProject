@@ -1,4 +1,4 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.uidproject.R
+import com.example.uidproject.join_route.models.Route
 
 class RouteListAdapter(private val context: Context, private val arrayList: java.util.ArrayList<Route>) : BaseAdapter() {
     private lateinit var creatorName: TextView

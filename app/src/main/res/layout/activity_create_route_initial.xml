@@ -57,21 +57,24 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/addStopButton"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="10dp"
-                android:text="Add Stop"/>
+                android:text="Add Stop"
+                app:cornerRadius="10dp" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/createRouteButton"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginStart="20dp"
-                android:text="Create Route"/>
+                android:text="Create Route"
+                app:cornerRadius="10dp" />
 
         </LinearLayout>
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewCreateRoute"
             android:layout_width="match_parent"

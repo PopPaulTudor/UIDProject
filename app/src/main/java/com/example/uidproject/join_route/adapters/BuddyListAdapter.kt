@@ -1,4 +1,4 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,11 +7,11 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.uidproject.R
+import com.example.uidproject.join_route.models.Buddy
 
-class ReviewListAdapter(private val context: Context, private val arrayList: java.util.ArrayList<Review>) : BaseAdapter() {
-    private lateinit var user: TextView
+class BuddyListAdapter(private val context: Context, private val arrayList: java.util.ArrayList<Buddy>) : BaseAdapter() {
+    private lateinit var name: TextView
     private lateinit var rating: TextView
-    private lateinit var review: TextView
 
     override fun getCount(): Int {
         return arrayList.size
@@ -27,14 +27,12 @@ class ReviewListAdapter(private val context: Context, private val arrayList: jav
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View? {
         var convertView = convertView
-        convertView = LayoutInflater.from(context).inflate(R.layout.review_row, parent, false)
-        user = convertView.findViewById(R.id.userName)
-        rating = convertView.findViewById(R.id.rating)
-        review = convertView.findViewById(R.id.review)
+        convertView = LayoutInflater.from(context).inflate(R.layout.buddy_row, parent, false)
+        name = convertView.findViewById(R.id.buddyName)
+        rating = convertView.findViewById(R.id.buddyRating)
 
-        user.text = arrayList[position].user
+        name.text = arrayList[position].name
         rating.text = arrayList[position].rating
-        review.text = arrayList[position].review
         return convertView
     }
 }

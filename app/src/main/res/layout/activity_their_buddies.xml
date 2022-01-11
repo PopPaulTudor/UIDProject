@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".join_route.TheirBuddies">
+    tools:context=".join_route.screens.TheirBuddies">
 
     <ListView
         android:id="@+id/their_buddy_list"

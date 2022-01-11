@@ -1,4 +1,4 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.screens
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

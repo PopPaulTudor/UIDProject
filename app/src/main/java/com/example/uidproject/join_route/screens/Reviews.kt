@@ -1,11 +1,11 @@
-package com.example.uidproject.join_route
+package com.example.uidproject.join_route.screens
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ListView
-import androidx.appcompat.app.AppCompatActivity
 import com.example.uidproject.BaseActivity
 import com.example.uidproject.R
+import com.example.uidproject.join_route.adapters.ReviewListAdapter
+import com.example.uidproject.join_route.models.Review
 import java.util.ArrayList
 
 class Reviews : BaseActivity() {

@@ -46,8 +46,8 @@ public abstract class BaseActivity extends AppCompatActivity implements BottomNa
             } else if (itemId == R.id.action_profile) {
                 startActivity(new Intent(this, ProfilePage.class));
             } else if (itemId == R.id.action_settings) {
-                Toast.makeText(getApplicationContext(), "Yet to be implemented",
-                        Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(this, SettingsActivity.class));
+
             }
             finish();
         }, 300);
